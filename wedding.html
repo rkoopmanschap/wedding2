@@ -1,0 +1,473 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-grid.min.css">
+		<script src="jquery-3.3.1.min.js"></script>
+		<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+	</head>
+
+	<body>
+		<div class="body">
+			<h1 class="text-center">De psychologisch verantwoorde trouwquiz</h1>
+
+
+			<div class="questions"> 
+				<div id="question-1" class="question text-center">
+					<h3>Vraag 1 (voor Dyonne)</h3>
+					<p>Wanneer is Sander jarig?</p>
+				</div>
+
+				<div id="question-2" class="question" hidden>
+					<h3 class="text-center">Vraag 2 (voor Sander)</h3>
+					<p>Wanneer is Dyonne jarig?</p>
+				</div>
+
+				<div id="question-3" class="question" hidden>
+					<h3 class="text-center">Vraag 3 (voor Dyonne)</h3>
+					<p>Wat is Sander's favoriete kleur?</p>
+				</div>
+
+				<div id="question-4" class="question" hidden>
+					<h3 class="text-center">Vraag 4 (voor Sander)</h3>
+					<p>Wat is de luchtsnelheid van een ongeladen zwaluw? (rond af op 2 cijfers achter de komma)</p>
+				</div>
+
+				<div id="question-5" class="question" hidden>
+					<h3 class="text-center">Vraag 5 (voor Dyonne)<h3>
+					<p>Wat is jullie trouwdatum?</p>
+				</div>
+
+				<div id="question-6" class="question" hidden>
+					<h3 class="text-center">Vraag 6 (voor Sander)</h3>
+					<p>Welke films heeft Dyonne gezien? (Meerdere antwoorden mogelijk)</p>
+				</div>
+
+				<div id="question-7" class="question" hidden>
+					<h3 class="text-center">Vraag 7 (voor Dyonne)</h3> 
+					<p>Gooi de dobbelsteen!</p>
+				</div>
+
+				<div id="question-8" class="question" hidden>
+					<h3 class="text-center">Vraag 8 (voor Sander)</h3>
+					<p>Gooi de dobbelsteen!</p>
+				</div>
+			</div>
+
+
+
+			<div class="answers">
+
+
+
+				<div class="text-center" id="answers-1">
+					<div class="form-group">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q1-a1" name="q1" value="true" />
+							<label class="form-check-label" for="q1-a1">11 Februari</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q1-a2" name="q1" value="false" />
+							<label class="form-check-label" for="q1-a2">12 Februari</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q1-a3" name="q1" value="false" />
+							<label class="form-check-label" for="q1-a3">13 Februari</label>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="text-center" id="answers-2" hidden>
+					<div class="form-group">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q2-a1" name="q2" value="false" />
+							<label class="form-check-label" for="q2-a1">14 September</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q2-a2" name="q2" value="false" />
+							<label class="form-check-label" for="q2-a2">15 September</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q2-a3" name="q2" value="false" />
+							<label class="form-check-label" for="q2-a3">16 September</label>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="text-center" id="answers-3" hidden>
+					<div class="form-group">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q3-a1" name="q3" value="true" />
+							<label class="form-check-label" for="q3-a1">Rood</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q3-a2" name="q3" value="true" />
+							<label class="form-check-label" for="q3-a2">Blauw</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q3-a3" name="q3" value="true" />
+							<label class="form-check-label" for="q3-a3">Groen</label>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="text-center" id="answers-4" hidden>
+					<div class="form-group">
+						<div class="form-check">
+							<input type="text" name="q4" placeholder="Bijv 12,38">Km/h
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="text-center" id="answers-5" hidden>
+					<div class="form-group">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q5-a1" name="q5" value="true" />
+							<label class="form-check-label" for="q3-a1">Rood</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q5-a2" name="q5" value="true" />
+							<label class="form-check-label" for="q3-a2">Blauw</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" id="q5-a3" name="q5" value="true" />
+							<label class="form-check-label" for="q3-a3">Groen</label>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="text-center" id="answers-6">
+					<div class="form-group">
+						<div class="form-check">
+							<input type="checkbox" id="Code Name: K.O.Z."><label for="Code Name: K.O.Z." type="checkbox">Code Name: K.O.Z.</label>
+							<input type="checkbox" id="Saving Christmas"><label for="Saving Christmas" type="checkbox">Saving Christmas</label>
+							<input type="checkbox" id="Superbabies: Baby Geniuses 2"><label for="Superbabies: Baby Geniuses 2" type="checkbox">Superbabies: Baby Geniuses 2</label>
+							<input type="checkbox" id="Daniel the Wizard"><label for="Daniel the Wizard" type="checkbox">Daniel the Wizard</label>
+							<input type="checkbox" id="Manos: The Hands of Fate"><label for="Manos: The Hands of Fate" type="checkbox">Manos: The Hands of Fate</label>
+							<input type="checkbox" id="Pledge This!"><label for="Pledge This!" type="checkbox">Pledge This!</label>
+							<input type="checkbox" id="Dünyayi Kurtaran Adam'in Oglu"><label for="Dünyayi Kurtaran Adam'in Oglu" type="checkbox">Dünyayi Kurtaran Adam'in Oglu</label>
+							<input type="checkbox" id="Foodfight!"><label for="Foodfight!" type="checkbox">Foodfight!</label>
+							<input type="checkbox" id="Birdemic: Shock and Terror"><label for="Birdemic: Shock and Terror" type="checkbox">Birdemic: Shock and Terror</label>
+							<input type="checkbox" id="Álom.net"><label for="Álom.net" type="checkbox">Álom.net</label>
+							<input type="checkbox" id="Titanic - La leggenda continua"><label for="Titanic - La leggenda continua" type="checkbox">Titanic - La leggenda continua</label>
+							<input type="checkbox" id="Disaster Movie"><label for="Disaster Movie" type="checkbox">Disaster Movie</label>
+							<input type="checkbox" id="Zombie Nation"><label for="Zombie Nation" type="checkbox">Zombie Nation</label>
+							<input type="checkbox" id="The Hottie & the Nottie"><label for="The Hottie & the Nottie" type="checkbox">The Hottie & the Nottie</label>
+							<input type="checkbox" id="Keloglan Karaprens'e Karsi"><label for="Keloglan Karaprens'e Karsi" type="checkbox">Keloglan Karaprens'e Karsi</label>
+							<input type="checkbox" id="From Justin to Kelly"><label for="From Justin to Kelly" type="checkbox">From Justin to Kelly</label>
+							<input type="checkbox" id="A Fox's Tale"><label for="A Fox's Tale" type="checkbox">A Fox's Tale</label>
+							<input type="checkbox" id="Ram Gopal Varma's Indian Flames"><label for="Ram Gopal Varma's Indian Flames" type="checkbox">Ram Gopal Varma's Indian Flames</label>
+							<input type="checkbox" id="Going Overboard"><label for="Going Overboard" type="checkbox">Going Overboard</label>
+							<input type="checkbox" id="Emret Komutanim: Sah Mat"><label for="Emret Komutanim: Sah Mat" type="checkbox">Emret Komutanim: Sah Mat</label>
+							<input type="checkbox" id="Attack of the Jurassic Shark"><label for="Attack of the Jurassic Shark" type="checkbox">Attack of the Jurassic Shark</label>
+							<input type="checkbox" id="Potato Salad"><label for="Potato Salad" type="checkbox">Potato Salad</label>
+							<input type="checkbox" id="Ben & Arthur"><label for="Ben & Arthur" type="checkbox">Ben & Arthur</label>
+							<input type="checkbox" id="La leggenda del Titanic"><label for="La leggenda del Titanic" type="checkbox">La leggenda del Titanic</label>
+							<input type="checkbox" id="Himmatwala"><label for="Himmatwala" type="checkbox">Himmatwala</label>
+							<input type="checkbox" id="Birdemic 2: The Resurrection"><label for="Birdemic 2: The Resurrection" type="checkbox">Birdemic 2: The Resurrection</label>
+							<input type="checkbox" id="Monster a-Go Go"><label for="Monster a-Go Go" type="checkbox">Monster a-Go Go</label>
+							<input type="checkbox" id="House of the Dead"><label for="House of the Dead" type="checkbox">House of the Dead</label>
+							<input type="checkbox" id="Who's Your Caddy?"><label for="Who's Your Caddy?" type="checkbox">Who's Your Caddy?</label>
+							<input type="checkbox" id="Humshakals"><label for="Humshakals" type="checkbox">Humshakals</label>
+							<input type="checkbox" id="Hobgoblins"><label for="Hobgoblins" type="checkbox">Hobgoblins</label>
+							<input type="checkbox" id="Glitter"><label for="Glitter" type="checkbox">Glitter</label>
+							<input type="checkbox" id="The Beast of Yucca Flats"><label for="The Beast of Yucca Flats" type="checkbox">The Beast of Yucca Flats</label>
+							<input type="checkbox" id="Son of the Mask"><label for="Son of the Mask" type="checkbox">Son of the Mask</label>
+							<input type="checkbox" id="Crossover"><label for="Crossover" type="checkbox">Crossover</label>
+							<input type="checkbox" id="Space Mutiny"><label for="Space Mutiny" type="checkbox">Space Mutiny</label>
+							<input type="checkbox" id="Night Train to Mundo Fine"><label for="Night Train to Mundo Fine" type="checkbox">Night Train to Mundo Fine</label>
+							<input type="checkbox" id="Extra Terrestrial Visitors"><label for="Extra Terrestrial Visitors" type="checkbox">Extra Terrestrial Visitors</label>
+							<input type="checkbox" id="Dracula 3000"><label for="Dracula 3000" type="checkbox">Dracula 3000</label>
+							<input type="checkbox" id="The Wild World of Batwoman"><label for="The Wild World of Batwoman" type="checkbox">The Wild World of Batwoman</label>
+							<input type="checkbox" id="Surf School"><label for="Surf School" type="checkbox">Surf School</label>
+							<input type="checkbox" id="Epic Movie"><label for="Epic Movie" type="checkbox">Epic Movie</label>
+							<input type="checkbox" id="Alone in the Dark"><label for="Alone in the Dark" type="checkbox">Alone in the Dark</label>
+							<input type="checkbox" id="The Starfighters"><label for="The Starfighters" type="checkbox">The Starfighters</label>
+							<input type="checkbox" id="Leonard Part 6"><label for="Leonard Part 6" type="checkbox">Leonard Part 6</label>
+							<input type="checkbox" id="Final Justice"><label for="Final Justice" type="checkbox">Final Justice</label>
+							<input type="checkbox" id="Eegah"><label for="Eegah" type="checkbox">Eegah</label>
+							<input type="checkbox" id="Die Hard Dracula"><label for="Die Hard Dracula" type="checkbox">Die Hard Dracula</label>
+							<input type="checkbox" id="The Class"><label for="The Class" type="checkbox">The Class</label>
+							<input type="checkbox" id="United Passions"><label for="United Passions" type="checkbox">United Passions</label>
+							<input type="checkbox" id="Gigli"><label for="Gigli" type="checkbox">Gigli</label>
+							<input type="checkbox" id="Kyaa Kool Hain Hum 3"><label for="Kyaa Kool Hain Hum 3" type="checkbox">Kyaa Kool Hain Hum 3</label>
+							<input type="checkbox" id="The Pumaman"><label for="The Pumaman" type="checkbox">The Pumaman</label>
+							<input type="checkbox" id="Battlefield Earth"><label for="Battlefield Earth" type="checkbox">Battlefield Earth</label>
+							<input type="checkbox" id="Troppo belli"><label for="Troppo belli" type="checkbox">Troppo belli</label>
+							<input type="checkbox" id="Smolensk"><label for="Smolensk" type="checkbox">Smolensk</label>
+							<input type="checkbox" id="Track of the Moon Beast"><label for="Track of the Moon Beast" type="checkbox">Track of the Moon Beast</label>
+							<input type="checkbox" id="Anne B. Real"><label for="Anne B. Real" type="checkbox">Anne B. Real</label>
+							<input type="checkbox" id="Invasion of the Neptune Men"><label for="Invasion of the Neptune Men" type="checkbox">Invasion of the Neptune Men</label>
+							<input type="checkbox" id="The Incredibly Strange Creatures Who Stopped Living and Became Mixed-Up Zombies!!?"><label for="The Incredibly Strange Creatures Who Stopped Living and Became Mixed-Up Zombies!!?" type="checkbox">The Incredibly Strange Creatures Who Stopped Living and Became Mixed-Up Zombies!!?</label>
+							<input type="checkbox" id="Zaat"><label for="Zaat" type="checkbox">Zaat</label>
+							<input type="checkbox" id="The Skydivers"><label for="The Skydivers" type="checkbox">The Skydivers</label>
+							<input type="checkbox" id="Girl in Gold Boots"><label for="Girl in Gold Boots" type="checkbox">Girl in Gold Boots</label>
+							<input type="checkbox" id="The Oogieloves in the Big Balloon Adventure"><label for="The Oogieloves in the Big Balloon Adventure" type="checkbox">The Oogieloves in the Big Balloon Adventure</label>
+							<input type="checkbox" id="Chairman of the Board"><label for="Chairman of the Board" type="checkbox">Chairman of the Board</label>
+							<input type="checkbox" id="Lawnmower Man 2: Beyond Cyberspace"><label for="Lawnmower Man 2: Beyond Cyberspace" type="checkbox">Lawnmower Man 2: Beyond Cyberspace</label>
+							<input type="checkbox" id="The Maize: The Movie"><label for="The Maize: The Movie" type="checkbox">The Maize: The Movie</label>
+							<input type="checkbox" id="The Touch of Satan"><label for="The Touch of Satan" type="checkbox">The Touch of Satan</label>
+							<input type="checkbox" id="Baby Geniuses"><label for="Baby Geniuses" type="checkbox">Baby Geniuses</label>
+							<input type="checkbox" id="Soultaker"><label for="Soultaker" type="checkbox">Soultaker</label>
+							<input type="checkbox" id="The Blade Master"><label for="The Blade Master" type="checkbox">The Blade Master</label>
+							<input type="checkbox" id="Prince of Space"><label for="Prince of Space" type="checkbox">Prince of Space</label>
+							<input type="checkbox" id="Simon Sez"><label for="Simon Sez" type="checkbox">Simon Sez</label>
+							<input type="checkbox" id="Santa Claus Conquers the Martians"><label for="Santa Claus Conquers the Martians" type="checkbox">Santa Claus Conquers the Martians</label>
+							<input type="checkbox" id="Tees Maar Khan"><label for="Tees Maar Khan" type="checkbox">Tees Maar Khan</label>
+							<input type="checkbox" id="Breaking Wind"><label for="Breaking Wind" type="checkbox">Breaking Wind</label>
+							<input type="checkbox" id="Santa with Muscles"><label for="Santa with Muscles" type="checkbox">Santa with Muscles</label>
+							<input type="checkbox" id="Zombie Nightmare"><label for="Zombie Nightmare" type="checkbox">Zombie Nightmare</label>
+							<input type="checkbox" id="Boggy Creek II: And the Legend Continues"><label for="Boggy Creek II: And the Legend Continues" type="checkbox">Boggy Creek II: And the Legend Continues</label>
+							<input type="checkbox" id="Dis - en historie om kjærlighet"><label for="Dis - en historie om kjærlighet" type="checkbox">Dis - en historie om kjærlighet</label>
+							<input type="checkbox" id="Fat Slags"><label for="Fat Slags" type="checkbox">Fat Slags</label>
+							<input type="checkbox" id="Car 54, Where Are You?"><label for="Car 54, Where Are You?" type="checkbox">Car 54, Where Are You?</label>
+							<input type="checkbox" id="Dragonball: Evolution"><label for="Dragonball: Evolution" type="checkbox">Dragonball: Evolution</label>
+							<input type="checkbox" id="La momia azteca contra el robot humano"><label for="La momia azteca contra el robot humano" type="checkbox">La momia azteca contra el robot humano</label>
+							<input type="checkbox" id="Body in the Web"><label for="Body in the Web" type="checkbox">Body in the Web</label>
+							<input type="checkbox" id="Mitchell"><label for="Mitchell" type="checkbox">Mitchell</label>
+							<input type="checkbox" id="Theodore Rex"><label for="Theodore Rex" type="checkbox">Theodore Rex</label>
+							<input type="checkbox" id="Santa Claus"><label for="Santa Claus" type="checkbox">Santa Claus</label>
+							<input type="checkbox" id="Laserblast"><label for="Laserblast" type="checkbox">Laserblast</label>
+							<input type="checkbox" id="Ed"><label for="Ed" type="checkbox">Ed</label>
+							<input type="checkbox" id="Survival Island"><label for="Survival Island" type="checkbox">Survival Island</label>
+							<input type="checkbox" id="Time Chasers"><label for="Time Chasers" type="checkbox">Time Chasers</label>
+							<input type="checkbox" id="Devil Fish"><label for="Devil Fish" type="checkbox">Devil Fish</label>
+							<input type="checkbox" id="Meet the Spartans"><label for="Meet the Spartans" type="checkbox">Meet the Spartans</label>
+							<input type="checkbox" id="It's Pat: The Movie"><label for="It's Pat: The Movie" type="checkbox">It's Pat: The Movie</label>
+							<input type="checkbox" id="I Accuse My Parents"><label for="I Accuse My Parents" type="checkbox">I Accuse My Parents</label>
+							<input type="checkbox" id="The Bat People"><label for="The Bat People" type="checkbox">The Bat People</label>
+							<input type="checkbox" id="Stjerner uden hjerner"><label for="Stjerner uden hjerner" type="checkbox">Stjerner uden hjerner</label>
+							<input type="checkbox" id="Ghosts Can't Do It"><label for="Ghosts Can't Do It" type="checkbox">Ghosts Can't Do It</label>
+							<input type="checkbox" id="Warrior of the Lost World"><label for="Warrior of the Lost World" type="checkbox">Warrior of the Lost World</label>
+							<input type="checkbox" id="The Shawshank Redemption"><label for="The Shawshank Redemption" type="checkbox">The Shawshank Redemption</label>
+							<input type="checkbox" id="The Godfather"><label for="The Godfather" type="checkbox">The Godfather</label>
+							<input type="checkbox" id="The Godfather: Part II"><label for="The Godfather: Part II" type="checkbox">The Godfather: Part II</label>
+							<input type="checkbox" id="The Dark Knight"><label for="The Dark Knight" type="checkbox">The Dark Knight</label>
+							<input type="checkbox" id="12 Angry Men"><label for="12 Angry Men" type="checkbox">12 Angry Men</label>
+							<input type="checkbox" id="Schindler's List"><label for="Schindler's List" type="checkbox">Schindler's List</label>
+							<input type="checkbox" id="The Lord of the Rings: The Return of the King"><label for="The Lord of the Rings: The Return of the King" type="checkbox">The Lord of the Rings: The Return of the King</label>
+							<input type="checkbox" id="Pulp Fiction"><label for="Pulp Fiction" type="checkbox">Pulp Fiction</label>
+							<input type="checkbox" id="Fight Club"><label for="Fight Club" type="checkbox">Fight Club</label>
+							<input type="checkbox" id="The Lord of the Rings: The Fellowship of the Ring"><label for="The Lord of the Rings: The Fellowship of the Ring" type="checkbox">The Lord of the Rings: The Fellowship of the Ring</label>
+							<input type="checkbox" id="Forrest Gump"><label for="Forrest Gump" type="checkbox">Forrest Gump</label>
+							<input type="checkbox" id="Star Wars: Episode V - The Empire Strikes Back"><label for="Star Wars: Episode V - The Empire Strikes Back" type="checkbox">Star Wars: Episode V - The Empire Strikes Back</label>
+							<input type="checkbox" id="Inception"><label for="Inception" type="checkbox">Inception</label>
+							<input type="checkbox" id="The Lord of the Rings: The Two Towers"><label for="The Lord of the Rings: The Two Towers" type="checkbox">The Lord of the Rings: The Two Towers</label>
+							<input type="checkbox" id="One Flew Over the Cuckoo's Nest"><label for="One Flew Over the Cuckoo's Nest" type="checkbox">One Flew Over the Cuckoo's Nest</label>
+							<input type="checkbox" id="Goodfellas"><label for="Goodfellas" type="checkbox">Goodfellas</label>
+							<input type="checkbox" id="The Matrix"><label for="The Matrix" type="checkbox">The Matrix</label>
+							<input type="checkbox" id="Star Wars: Episode IV - A New Hope"><label for="Star Wars: Episode IV - A New Hope" type="checkbox">Star Wars: Episode IV - A New Hope</label>
+							<input type="checkbox" id="Se7en"><label for="Se7en" type="checkbox">Se7en</label>
+							<input type="checkbox" id="It's a Wonderful Life"><label for="It's a Wonderful Life" type="checkbox">It's a Wonderful Life</label>
+							<input type="checkbox" id="The Silence of the Lambs"><label for="The Silence of the Lambs" type="checkbox">The Silence of the Lambs</label>
+							<input type="checkbox" id="The Usual Suspects"><label for="The Usual Suspects" type="checkbox">The Usual Suspects</label>
+							<input type="checkbox" id="Léon: The Professional"><label for="Léon: The Professional" type="checkbox">Léon: The Professional</label>
+							<input type="checkbox" id="Saving Private Ryan"><label for="Saving Private Ryan" type="checkbox">Saving Private Ryan</label>
+							<input type="checkbox" id="City Lights"><label for="City Lights" type="checkbox">City Lights</label>
+							<input type="checkbox" id="Interstellar"><label for="Interstellar" type="checkbox">Interstellar</label>
+							<input type="checkbox" id="American History X"><label for="American History X" type="checkbox">American History X</label>
+							<input type="checkbox" id="Modern Times"><label for="Modern Times" type="checkbox">Modern Times</label>
+							<input type="checkbox" id="Casablanca"><label for="Casablanca" type="checkbox">Casablanca</label>
+							<input type="checkbox" id="The Green Mile"><label for="The Green Mile" type="checkbox">The Green Mile</label>
+							<input type="checkbox" id="Psycho"><label for="Psycho" type="checkbox">Psycho</label>
+							<input type="checkbox" id="Raiders of the Lost Ark"><label for="Raiders of the Lost Ark" type="checkbox">Raiders of the Lost Ark</label>
+							<input type="checkbox" id="The Pianist"><label for="The Pianist" type="checkbox">The Pianist</label>
+							<input type="checkbox" id="Rear Window"><label for="Rear Window" type="checkbox">Rear Window</label>
+							<input type="checkbox" id="The Departed"><label for="The Departed" type="checkbox">The Departed</label>
+							<input type="checkbox" id="Whiplash"><label for="Whiplash" type="checkbox">Whiplash</label>
+							<input type="checkbox" id="Terminator 2: Judgment Day"><label for="Terminator 2: Judgment Day" type="checkbox">Terminator 2: Judgment Day</label>
+							<input type="checkbox" id="Back to the Future"><label for="Back to the Future" type="checkbox">Back to the Future</label>
+							<input type="checkbox" id="Gladiator"><label for="Gladiator" type="checkbox">Gladiator</label>
+							<input type="checkbox" id="The Lion King"><label for="The Lion King" type="checkbox">The Lion King</label>
+							<input type="checkbox" id="The Prestige"><label for="The Prestige" type="checkbox">The Prestige</label>
+							<input type="checkbox" id="Apocalypse Now"><label for="Apocalypse Now" type="checkbox">Apocalypse Now</label>
+							<input type="checkbox" id="Memento"><label for="Memento" type="checkbox">Memento</label>
+							<input type="checkbox" id="The Great Dictator"><label for="The Great Dictator" type="checkbox">The Great Dictator</label>
+							<input type="checkbox" id="Sunset Blvd."><label for="Sunset Blvd." type="checkbox">Sunset Blvd.</label>
+							<input type="checkbox" id="Alien"><label for="Alien" type="checkbox">Alien</label>
+							<input type="checkbox" id="Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"><label for="Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb" type="checkbox">Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb</label>
+							<input type="checkbox" id="Paths of Glory"><label for="Paths of Glory" type="checkbox">Paths of Glory</label>
+							<input type="checkbox" id="Django Unchained"><label for="Django Unchained" type="checkbox">Django Unchained</label>
+							<input type="checkbox" id="The Shining"><label for="The Shining" type="checkbox">The Shining</label>
+							<input type="checkbox" id="Witness for the Prosecution"><label for="Witness for the Prosecution" type="checkbox">Witness for the Prosecution</label>
+							<input type="checkbox" id="The Dark Knight Rises"><label for="The Dark Knight Rises" type="checkbox">The Dark Knight Rises</label>
+							<input type="checkbox" id="WALL·E"><label for="WALL·E" type="checkbox">WALL·E</label>
+							<input type="checkbox" id="American Beauty"><label for="American Beauty" type="checkbox">American Beauty</label>
+							<input type="checkbox" id="Once Upon a Time in America"><label for="Once Upon a Time in America" type="checkbox">Once Upon a Time in America</label>
+							<input type="checkbox" id="Aliens"><label for="Aliens" type="checkbox">Aliens</label>
+							<input type="checkbox" id="Citizen Kane"><label for="Citizen Kane" type="checkbox">Citizen Kane</label>
+							<input type="checkbox" id="North by Northwest"><label for="North by Northwest" type="checkbox">North by Northwest</label>
+							<input type="checkbox" id="Vertigo"><label for="Vertigo" type="checkbox">Vertigo</label>
+							<input type="checkbox" id="Star Wars: Episode VI - Return of the Jedi"><label for="Star Wars: Episode VI - Return of the Jedi" type="checkbox">Star Wars: Episode VI - Return of the Jedi</label>
+							<input type="checkbox" id="Braveheart"><label for="Braveheart" type="checkbox">Braveheart</label>
+							<input type="checkbox" id="Reservoir Dogs"><label for="Reservoir Dogs" type="checkbox">Reservoir Dogs</label>
+							<input type="checkbox" id="Double Indemnity"><label for="Double Indemnity" type="checkbox">Double Indemnity</label>
+							<input type="checkbox" id="Requiem for a Dream"><label for="Requiem for a Dream" type="checkbox">Requiem for a Dream</label>
+							<input type="checkbox" id="Lawrence of Arabia"><label for="Lawrence of Arabia" type="checkbox">Lawrence of Arabia</label>
+							<input type="checkbox" id="The Kid"><label for="The Kid" type="checkbox">The Kid</label>
+							<input type="checkbox" id="A Clockwork Orange"><label for="A Clockwork Orange" type="checkbox">A Clockwork Orange</label>
+							<input type="checkbox" id="Amadeus"><label for="Amadeus" type="checkbox">Amadeus</label>
+							<input type="checkbox" id="To Kill a Mockingbird"><label for="To Kill a Mockingbird" type="checkbox">To Kill a Mockingbird</label>
+							<input type="checkbox" id="Eternal Sunshine of the Spotless Mind"><label for="Eternal Sunshine of the Spotless Mind" type="checkbox">Eternal Sunshine of the Spotless Mind</label>
+							<input type="checkbox" id="Singin' in the Rain"><label for="Singin' in the Rain" type="checkbox">Singin' in the Rain</label>
+							<input type="checkbox" id="Taxi Driver"><label for="Taxi Driver" type="checkbox">Taxi Driver</label>
+							<input type="checkbox" id="The Sting"><label for="The Sting" type="checkbox">The Sting</label>
+							<input type="checkbox" id="Toy Story 3"><label for="Toy Story 3" type="checkbox">Toy Story 3</label>
+							<input type="checkbox" id="2001: A Space Odyssey"><label for="2001: A Space Odyssey" type="checkbox">2001: A Space Odyssey</label>
+							<input type="checkbox" id="Full Metal Jacket"><label for="Full Metal Jacket" type="checkbox">Full Metal Jacket</label>
+							<input type="checkbox" id="Baby Driver"><label for="Baby Driver" type="checkbox">Baby Driver</label>
+							<input type="checkbox" id="Toy Story"><label for="Toy Story" type="checkbox">Toy Story</label>
+							<input type="checkbox" id="Inglourious Basterds"><label for="Inglourious Basterds" type="checkbox">Inglourious Basterds</label>
+							<input type="checkbox" id="Snatch"><label for="Snatch" type="checkbox">Snatch</label>
+							<input type="checkbox" id="The Apartment"><label for="The Apartment" type="checkbox">The Apartment</label>
+							<input type="checkbox" id="All About Eve"><label for="All About Eve" type="checkbox">All About Eve</label>
+							<input type="checkbox" id="Monty Python and the Holy Grail"><label for="Monty Python and the Holy Grail" type="checkbox">Monty Python and the Holy Grail</label>
+							<input type="checkbox" id="Scarface"><label for="Scarface" type="checkbox">Scarface</label>
+							<input type="checkbox" id="L.A. Confidential"><label for="L.A. Confidential" type="checkbox">L.A. Confidential</label>
+							<input type="checkbox" id="Good Will Hunting"><label for="Good Will Hunting" type="checkbox">Good Will Hunting</label>
+							<input type="checkbox" id="The Treasure of the Sierra Madre"><label for="The Treasure of the Sierra Madre" type="checkbox">The Treasure of the Sierra Madre</label>
+							<input type="checkbox" id="Indiana Jones and the Last Crusade"><label for="Indiana Jones and the Last Crusade" type="checkbox">Indiana Jones and the Last Crusade</label>
+							<input type="checkbox" id="Some Like It Hot"><label for="Some Like It Hot" type="checkbox">Some Like It Hot</label>
+							<input type="checkbox" id="Batman Begins"><label for="Batman Begins" type="checkbox">Batman Begins</label>
+							<input type="checkbox" id="Up"><label for="Up" type="checkbox">Up</label>
+							<input type="checkbox" id="The Third Man"><label for="The Third Man" type="checkbox">The Third Man</label>
+							<input type="checkbox" id="Unforgiven"><label for="Unforgiven" type="checkbox">Unforgiven</label>
+							<input type="checkbox" id="Judgment at Nuremberg"><label for="Judgment at Nuremberg" type="checkbox">Judgment at Nuremberg</label>
+							<input type="checkbox" id="Raging Bull"><label for="Raging Bull" type="checkbox">Raging Bull</label>
+							<input type="checkbox" id="The Great Escape"><label for="The Great Escape" type="checkbox">The Great Escape</label>
+							<input type="checkbox" id="Heat"><label for="Heat" type="checkbox">Heat</label>
+							<input type="checkbox" id="Die Hard"><label for="Die Hard" type="checkbox">Die Hard</label>
+							<input type="checkbox" id="The Gold Rush"><label for="The Gold Rush" type="checkbox">The Gold Rush</label>
+							<input type="checkbox" id="Chinatown"><label for="Chinatown" type="checkbox">Chinatown</label>
+							<input type="checkbox" id="On the Waterfront"><label for="On the Waterfront" type="checkbox">On the Waterfront</label>
+							<input type="checkbox" id="Mr. Smith Goes to Washington"><label for="Mr. Smith Goes to Washington" type="checkbox">Mr. Smith Goes to Washington</label>
+							<input type="checkbox" id="The General"><label for="The General" type="checkbox">The General</label>
+							<input type="checkbox" id="Inside Out"><label for="Inside Out" type="checkbox">Inside Out</label>
+							<input type="checkbox" id="The Bridge on the River Kwai"><label for="The Bridge on the River Kwai" type="checkbox">The Bridge on the River Kwai</label>
+							<input type="checkbox" id="Room"><label for="Room" type="checkbox">Room</label>
+							<input type="checkbox" id="La La Land"><label for="La La Land" type="checkbox">La La Land</label>
+							<input type="checkbox" id="Logan"><label for="Logan" type="checkbox">Logan</label>
+							<input type="checkbox" id="Blade Runner"><label for="Blade Runner" type="checkbox">Blade Runner</label>
+							<input type="checkbox" id="Lock, Stock and Two Smoking Barrels"><label for="Lock, Stock and Two Smoking Barrels" type="checkbox">Lock, Stock and Two Smoking Barrels</label>
+							<input type="checkbox" id="Casino"><label for="Casino" type="checkbox">Casino</label>
+							<input type="checkbox" id="A Beautiful Mind"><label for="A Beautiful Mind" type="checkbox">A Beautiful Mind</label>
+							<input type="checkbox" id="The Elephant Man"><label for="The Elephant Man" type="checkbox">The Elephant Man</label>
+							<input type="checkbox" id="Warrior"><label for="Warrior" type="checkbox">Warrior</label>
+							<input type="checkbox" id="V for Vendetta"><label for="V for Vendetta" type="checkbox">V for Vendetta</label>
+							<input type="checkbox" id="The Wolf of Wall Street"><label for="The Wolf of Wall Street" type="checkbox">The Wolf of Wall Street</label>
+							<input type="checkbox" id="Dial M for Murder"><label for="Dial M for Murder" type="checkbox">Dial M for Murder</label>
+							<input type="checkbox" id="Hacksaw Ridge"><label for="Hacksaw Ridge" type="checkbox">Hacksaw Ridge</label>
+							<input type="checkbox" id="Gone with the Wind"><label for="Gone with the Wind" type="checkbox">Gone with the Wind</label>
+							<input type="checkbox" id="The Message"><label for="The Message" type="checkbox">The Message</label>
+							<input type="checkbox" id="Rebecca"><label for="Rebecca" type="checkbox">Rebecca</label>
+							<input type="checkbox" id="Trainspotting"><label for="Trainspotting" type="checkbox">Trainspotting</label>
+							<input type="checkbox" id="The Deer Hunter"><label for="The Deer Hunter" type="checkbox">The Deer Hunter</label>
+							<input type="checkbox" id="Cool Hand Luke"><label for="Cool Hand Luke" type="checkbox">Cool Hand Luke</label>
+							<input type="checkbox" id="Gran Torino"><label for="Gran Torino" type="checkbox">Gran Torino</label>
+							<input type="checkbox" id="The Big Lebowski"><label for="The Big Lebowski" type="checkbox">The Big Lebowski</label>
+							<input type="checkbox" id="The Thing"><label for="The Thing" type="checkbox">The Thing</label>
+							<input type="checkbox" id="It Happened One Night"><label for="It Happened One Night" type="checkbox">It Happened One Night</label>
+							<input type="checkbox" id="Fargo"><label for="Fargo" type="checkbox">Fargo</label>
+							<input type="checkbox" id="The Sixth Sense"><label for="The Sixth Sense" type="checkbox">The Sixth Sense</label>
+							<input type="checkbox" id="Finding Nemo"><label for="Finding Nemo" type="checkbox">Finding Nemo</label>
+							<input type="checkbox" id="Mary and Max"><label for="Mary and Max" type="checkbox">Mary and Max</label>
+							<input type="checkbox" id="No Country for Old Men"><label for="No Country for Old Men" type="checkbox">No Country for Old Men</label>
+							<input type="checkbox" id="How to Train Your Dragon"><label for="How to Train Your Dragon" type="checkbox">How to Train Your Dragon</label>
+							<input type="checkbox" id="There Will Be Blood"><label for="There Will Be Blood" type="checkbox">There Will Be Blood</label>
+							<input type="checkbox" id="Into the Wild"><label for="Into the Wild" type="checkbox">Into the Wild</label>
+							<input type="checkbox" id="Kill Bill: Vol. 1"><label for="Kill Bill: Vol. 1" type="checkbox">Kill Bill: Vol. 1</label>
+							<input type="checkbox" id="Gone Girl"><label for="Gone Girl" type="checkbox">Gone Girl</label>
+							<input type="checkbox" id="Life of Brian"><label for="Life of Brian" type="checkbox">Life of Brian</label>
+							<input type="checkbox" id="Network"><label for="Network" type="checkbox">Network</label>
+							<input type="checkbox" id="Shutter Island"><label for="Shutter Island" type="checkbox">Shutter Island</label>
+							<input type="checkbox" id="In the Name of the Father"><label for="In the Name of the Father" type="checkbox">In the Name of the Father</label>
+							<input type="checkbox" id="Rush"><label for="Rush" type="checkbox">Rush</label>
+							<input type="checkbox" id="Hotel Rwanda"><label for="Hotel Rwanda" type="checkbox">Hotel Rwanda</label>
+							<input type="checkbox" id="Platoon"><label for="Platoon" type="checkbox">Platoon</label>
+							<input type="checkbox" id="Song of the Sea"><label for="Song of the Sea" type="checkbox">Song of the Sea</label>
+							<input type="checkbox" id="Ben-Hur"><label for="Ben-Hur" type="checkbox">Ben-Hur</label>
+							<input type="checkbox" id="Stand by Me"><label for="Stand by Me" type="checkbox">Stand by Me</label>
+							<input type="checkbox" id="Hachi: A Dog's Tale"><label for="Hachi: A Dog's Tale" type="checkbox">Hachi: A Dog's Tale</label>
+							<input type="checkbox" id="Kind Hearts and Coronets"><label for="Kind Hearts and Coronets" type="checkbox">Kind Hearts and Coronets</label>
+							<input type="checkbox" id="The Maltese Falcon"><label for="The Maltese Falcon" type="checkbox">The Maltese Falcon</label>
+							<input type="checkbox" id="Butch Cassidy and the Sundance Kid"><label for="Butch Cassidy and the Sundance Kid" type="checkbox">Butch Cassidy and the Sundance Kid</label>
+							<input type="checkbox" id="La leggenda del pianista sull'oceano"><label for="La leggenda del pianista sull'oceano" type="checkbox">La leggenda del pianista sull'oceano</label>
+							<input type="checkbox" id="Spotlight"><label for="Spotlight" type="checkbox">Spotlight</label>
+							<input type="checkbox" id="Brief Encounter"><label for="Brief Encounter" type="checkbox">Brief Encounter</label>
+							<input type="checkbox" id="The Best Years of Our Lives"><label for="The Best Years of Our Lives" type="checkbox">The Best Years of Our Lives</label>
+							<input type="checkbox" id="The Grapes of Wrath"><label for="The Grapes of Wrath" type="checkbox">The Grapes of Wrath</label>
+							<input type="checkbox" id="12 Years a Slave"><label for="12 Years a Slave" type="checkbox">12 Years a Slave</label>
+							<input type="checkbox" id="The Grand Budapest Hotel"><label for="The Grand Budapest Hotel" type="checkbox">The Grand Budapest Hotel</label>
+							<input type="checkbox" id="Mad Max: Fury Road"><label for="Mad Max: Fury Road" type="checkbox">Mad Max: Fury Road</label>
+							<input type="checkbox" id="The Princess Bride"><label for="The Princess Bride" type="checkbox">The Princess Bride</label>
+							<input type="checkbox" id="What Ever Happened to Baby Jane?"><label for="What Ever Happened to Baby Jane?" type="checkbox">What Ever Happened to Baby Jane?</label>
+							<input type="checkbox" id="Million Dollar Baby"><label for="Million Dollar Baby" type="checkbox">Million Dollar Baby</label>
+							<input type="checkbox" id="Jurassic Park"><label for="Jurassic Park" type="checkbox">Jurassic Park</label>
+							<input type="checkbox" id="Touch of Evil"><label for="Touch of Evil" type="checkbox">Touch of Evil</label>
+							<input type="checkbox" id="Spider-Man: Homecoming"><label for="Spider-Man: Homecoming" type="checkbox">Spider-Man: Homecoming</label>
+							<input type="checkbox" id="Before Sunrise"><label for="Before Sunrise" type="checkbox">Before Sunrise</label>
+							<input type="checkbox" id="The Truman Show"><label for="The Truman Show" type="checkbox">The Truman Show</label>
+							<input type="checkbox" id="Harry Potter and the Deathly Hallows: Part 2"><label for="Harry Potter and the Deathly Hallows: Part 2" type="checkbox">Harry Potter and the Deathly Hallows: Part 2</label>
+							<input type="checkbox" id="Star Wars: Episode VII - The Force Awakens"><label for="Star Wars: Episode VII - The Force Awakens" type="checkbox">Star Wars: Episode VII - The Force Awakens</label>
+							<input type="checkbox" id="Paris, Texas"><label for="Paris, Texas" type="checkbox">Paris, Texas</label>
+							<input type="checkbox" id="The Last Picture Show"><label for="The Last Picture Show" type="checkbox">The Last Picture Show</label>
+							<input type="checkbox" id="Gandhi"><label for="Gandhi" type="checkbox">Gandhi</label>
+							<input type="checkbox" id="Barry Lyndon"><label for="Barry Lyndon" type="checkbox">Barry Lyndon</label>
+							<input type="checkbox" id="Rocky"><label for="Rocky" type="checkbox">Rocky</label>
+							<input type="checkbox" id="Annie Hall"><label for="Annie Hall" type="checkbox">Annie Hall</label>
+							<input type="checkbox" id="Prisoners"><label for="Prisoners" type="checkbox">Prisoners</label>
+							<input type="checkbox" id="Donnie Darko"><label for="Donnie Darko" type="checkbox">Donnie Darko</label>
+							<input type="checkbox" id="Catch Me If You Can"><label for="Catch Me If You Can" type="checkbox">Catch Me If You Can</label>
+							<input type="checkbox" id="The Man Who Shot Liberty Valance"><label for="The Man Who Shot Liberty Valance" type="checkbox">The Man Who Shot Liberty Valance</label>
+							<input type="checkbox" id="Laura"><label for="Laura" type="checkbox">Laura</label>
+							<input type="checkbox" id="Monsters, Inc."><label for="Monsters, Inc." type="checkbox">Monsters, Inc.</label>
+							<input type="checkbox" id="The Bourne Ultimatum"><label for="The Bourne Ultimatum" type="checkbox">The Bourne Ultimatum</label>
+							<input type="checkbox" id="Cat on a Hot Tin Roof"><label for="Cat on a Hot Tin Roof" type="checkbox">Cat on a Hot Tin Roof</label>
+							<input type="checkbox" id="The Wizard of Oz"><label for="The Wizard of Oz" type="checkbox">The Wizard of Oz</label>
+							<input type="checkbox" id="Sleuth"><label for="Sleuth" type="checkbox">Sleuth</label>
+							<input type="checkbox" id="Roman Holiday"><label for="Roman Holiday" type="checkbox">Roman Holiday</label>
+							<input type="checkbox" id="Out of the Past"><label for="Out of the Past" type="checkbox">Out of the Past</label>
+							<input type="checkbox" id="Anatomy of a Murder"><label for="Anatomy of a Murder" type="checkbox">Anatomy of a Murder</label>
+							<input type="checkbox" id="Who's Afraid of Virginia Woolf?"><label for="Who's Afraid of Virginia Woolf?" type="checkbox">Who's Afraid of Virginia Woolf?</label>
+							<input type="checkbox" id="The Terminator"><label for="The Terminator" type="checkbox">The Terminator</label>
+							<input type="checkbox" id="Groundhog Day"><label for="Groundhog Day" type="checkbox">Groundhog Day</label>
+							<input type="checkbox" id="The Help"><label for="The Help" type="checkbox">The Help</label>
+							<input type="checkbox" id="Strangers on a Train"><label for="Strangers on a Train" type="checkbox">Strangers on a Train</label>
+							<input type="checkbox" id="The Night of the Hunter"><label for="The Night of the Hunter" type="checkbox">The Night of the Hunter</label>
+							<input type="checkbox" id="All Quiet on the Western Front"><label for="All Quiet on the Western Front" type="checkbox">All Quiet on the Western Front</label>
+							<input type="checkbox" id="Beauty and the Beast"><label for="Beauty and the Beast" type="checkbox">Beauty and the Beast</label>
+							<input type="checkbox" id="Lion"><label for="Lion" type="checkbox">Lion</label>
+							<input type="checkbox" id="Twelve Monkeys"><label for="Twelve Monkeys" type="checkbox">Twelve Monkeys</label>
+
+						</div>
+						
+						
+					</div>
+				</div>
+
+
+
+
+			</div>
+
+
+		</div>
+	</body>
+
+</html>
