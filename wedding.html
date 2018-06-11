@@ -7,8 +7,33 @@
 	</head>
 
 	<body>
-		<div class="body">
-			<h1 class="text-center">De psychologisch verantwoorde trouwquiz</h1>
+		<div class="container">
+			<div id="heading" style="margin-bottom:10px;">
+				<h1 class="text-center">De officiële trouwquiz</h1>
+
+				<div class="row">
+					<div class="col-3 offset-2 text-center" style="font-size: 21px; font-weight:bold;">Score Sander</div>
+					<div class="col-3 offset-2 text-center" style="font-size: 21px; font-weight:bold;">Score Dyonne</div>
+				</div>
+				<div class="row">
+					<div class="col-3 offset-2 text-center" id="score-sander" style="font-size: 40px; font-weight:bold;">0</div>
+					<div class="col-3 offset-2 text-center" id="score-dyonne" style="font-size: 40px; font-weight:bold;">0</div>
+				</div>
+
+				<div class="row">
+					<div class="col-3 offset-2 text-center" id="doll-sander">
+						<canvas id="myCanvas" width="200" height="250" style="border:1px solid #000000;"></canvas>
+					</div>
+
+					<div class="col-2 text-center" id="notifcation-box" style="font-size: 20px; padding-top: 70px;">
+
+					</div>
+
+					<div class="col-3 text-center" id="doll-dyonne">
+						<canvas id="myCanvas" width="200" height="250" style="border:1px solid #000000;"></canvas>
+					</div>
+				</div>
+			</div>
 
 
 			<div class="questions"> 
@@ -17,38 +42,38 @@
 					<p>Wanneer is Sander jarig?</p>
 				</div>
 
-				<div id="question-2" class="question" hidden>
-					<h3 class="text-center">Vraag 2 (voor Sander)</h3>
+				<div id="question-2" class="question text-center" style="display: none;">
+					<h3>Vraag 2 (voor Sander)</h3>
 					<p>Wanneer is Dyonne jarig?</p>
 				</div>
 
-				<div id="question-3" class="question" hidden>
-					<h3 class="text-center">Vraag 3 (voor Dyonne)</h3>
+				<div id="question-3" class="question text-center" style="display: none;">
+					<h3>Vraag 3 (voor Dyonne)</h3>
 					<p>Wat is Sander's favoriete kleur?</p>
 				</div>
 
-				<div id="question-4" class="question" hidden>
-					<h3 class="text-center">Vraag 4 (voor Sander)</h3>
+				<div id="question-4" class="question text-center" style="display: none;">
+					<h3>Vraag 4 (voor Sander)</h3>
 					<p>Wat is de luchtsnelheid van een ongeladen zwaluw? (rond af op 2 cijfers achter de komma)</p>
 				</div>
 
-				<div id="question-5" class="question" hidden>
-					<h3 class="text-center">Vraag 5 (voor Dyonne)<h3>
+				<div id="question-5" class="question text-center" style="display: none;">
+					<h3>Vraag 5 (voor Dyonne)</h3>
 					<p>Wat is jullie trouwdatum?</p>
 				</div>
 
-				<div id="question-6" class="question" hidden>
-					<h3 class="text-center">Vraag 6 (voor Sander)</h3>
+				<div id="question-6" class="question text-center" style="display: none;">
+					<h3>Vraag 6 (voor Sander)</h3>
 					<p>Welke films heeft Dyonne gezien? (Meerdere antwoorden mogelijk)</p>
 				</div>
 
-				<div id="question-7" class="question" hidden>
-					<h3 class="text-center">Vraag 7 (voor Dyonne)</h3> 
+				<div id="question-7" class="question text-center" style="display: none;">
+					<h3>Vraag 7 (voor Dyonne)</h3> 
 					<p>Gooi de dobbelsteen!</p>
 				</div>
 
-				<div id="question-8" class="question" hidden>
-					<h3 class="text-center">Vraag 8 (voor Sander)</h3>
+				<div id="question-8" class="question text-center" style="display: none;">
+					<h3>Vraag 8 (voor Sander)</h3>
 					<p>Gooi de dobbelsteen!</p>
 				</div>
 			</div>
@@ -74,12 +99,15 @@
 							<label class="form-check-label" for="q1-a3">13 Februari</label>
 						</div>
 					</div>
+					<div class="form-group">
+						<button id="q1-submit" class="btn btn-primary">Beantwoord</button>
+					</div>
 				</div>
 
 
 
 
-				<div class="text-center" id="answers-2" hidden>
+				<div class="text-center" id="answers-2" style="display: none;">
 					<div class="form-group">
 						<div class="form-check">
 							<input class="form-check-input" type="radio" id="q2-a1" name="q2" value="false" />
@@ -94,12 +122,15 @@
 							<label class="form-check-label" for="q2-a3">16 September</label>
 						</div>
 					</div>
+					<div class="form-group">
+						<button id="q2-submit" class="btn btn-primary">Beantwoord</button>
+					</div>
 				</div>
 
 
 
 
-				<div class="text-center" id="answers-3" hidden>
+				<div class="text-center" id="answers-3" style="display: none;">
 					<div class="form-group">
 						<div class="form-check">
 							<input class="form-check-input" type="radio" id="q3-a1" name="q3" value="true" />
@@ -114,16 +145,22 @@
 							<label class="form-check-label" for="q3-a3">Groen</label>
 						</div>
 					</div>
+					<div class="form-group">
+						<button id="q3-submit" class="btn btn-primary">Beantwoord</button>
+					</div>
 				</div>
 
 
 
 
-				<div class="text-center" id="answers-4" hidden>
+				<div class="text-center" id="answers-4" style="display: none;">
 					<div class="form-group">
 						<div class="form-check">
-							<input type="text" name="q4" placeholder="Bijv 12,38">Km/h
+							<input type="text" name="q4" id="q4" placeholder="Bijv 12,38"> Km/h
 						</div>
+					</div>
+					<div class="form-group">
+						<button id="q4-submit" class="btn btn-primary">Beantwoord</button>
 					</div>
 				</div>
 
@@ -132,28 +169,34 @@
 
 
 
-				<div class="text-center" id="answers-5" hidden>
+				<div class="text-center" id="answers-5" style="display: none;">
 					<div class="form-group">
 						<div class="form-check">
 							<input class="form-check-input" type="radio" id="q5-a1" name="q5" value="true" />
-							<label class="form-check-label" for="q3-a1">Rood</label>
+							<label class="form-check-label" for="q5-a1">14 Juni 2018</label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="radio" id="q5-a2" name="q5" value="true" />
-							<label class="form-check-label" for="q3-a2">Blauw</label>
+							<label class="form-check-label" for="q5-a2">14 Juni 2019</label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="radio" id="q5-a3" name="q5" value="true" />
-							<label class="form-check-label" for="q3-a3">Groen</label>
+							<label class="form-check-label" for="q5-a3">14 Juni 2020</label>
 						</div>
+					</div>
+					<div class="form-group">
+						<button id="q5-submit" class="btn btn-primary">Beantwoord</button>
 					</div>
 				</div>
 
 
 
 
-				<div class="text-center" id="answers-6">
+				<div class="text-center" id="answers-6" style="display: none;">
 					<div class="form-group">
+						<div class="form-group">
+							<button id="q6-submit" class="btn btn-primary">Beantwoord</button>
+						</div>
 						<div class="form-check">
 							<input type="checkbox" id="Code Name: K.O.Z."><label for="Code Name: K.O.Z." type="checkbox">Code Name: K.O.Z.</label>
 							<input type="checkbox" id="Saving Christmas"><label for="Saving Christmas" type="checkbox">Saving Christmas</label>
@@ -462,7 +505,21 @@
 				</div>
 
 
+				<div class="text-center" id="answers-7" style="display: none;">
+					<div class="form-group">
+						<button id="q7-submit" class="btn btn-primary">GOOI!</button>
+					</div>
+				</div>
 
+				<div class="text-center" id="answers-8" style="display: none;">
+					<div class="form-group">
+						<button id="q8-submit" class="btn btn-primary">GOOI!</button>
+					</div>
+				</div>
+
+				<div id="congratulations" class="text-center" style="display: none;">
+					<h3>Gelijkspel! Jullie kennen elkaar even goed! Gefeliciteerd!</h3>
+				</div>
 
 			</div>
 
@@ -471,3 +528,196 @@
 	</body>
 
 </html>
+
+<script>
+	$(function() {
+		var scoreSander = 0;
+		var scoreDyonne = 0;
+
+		function renderScoreBoard() {
+			$("#score-sander").html(scoreSander);
+			$("#score-dyonne").html(scoreDyonne);
+		}
+
+		function playDyonneCheers() {
+			console.log("dyonne cheers");
+		}
+
+		function playDyonneSad() {
+			console.log("dyonne sad");	
+		}
+
+		function playSanderCheers() {
+			console.log("sander cheers");
+		}
+
+		function playSanderSad() {
+			console.log("sander sad");
+		}
+
+		function showMessage(message) {
+			$("#notifcation-box").html(message);
+		}
+
+		function clearMessage() {
+			$("#notifcation-box").html("");
+		}
+
+		function updateScores(name, points, message) {
+			if(name === "dyonne") {
+				scoreDyonne += points;
+				playDyonneCheers();
+				playSanderSad();
+			}
+			if(name === "sander") {
+				scoreSander += points;
+				playSanderCheers();
+				playDyonneSad();
+			}
+
+			renderScoreBoard();
+			showMessage(message);
+		}
+
+		$("#q1-submit").click(function() {
+			$("#q1-submit").prop('disabled', true);
+
+			if($("#q1-a2").prop("checked")) {
+				updateScores("dyonne", 1, "Goed!");
+			} else if($("#q1-a1").prop("checked") || $("#q1-a3").prop("checked")) {
+				updateScores("sander", 0, "Fout!");
+			} else {
+				$("#q1-submit").prop('disabled', false);
+				return;
+			}
+
+			setTimeout(function() { 
+				$("#question-1").hide();
+				$("#answers-1").hide();
+				$("#question-2").show();
+				$("#answers-2").show();
+				clearMessage();
+			}, 3000);
+			
+		});
+
+		$("#q2-submit").click(function() {
+			$("#q2-submit").prop('disabled', true);
+
+			if($("#q2-a1").prop("checked") || $("#q2-a2").prop("checked") || $("#q2-a3").prop("checked")) {
+				updateScores("dyonne", 0, "Fout!");
+			} else {
+				$("#q2-submit").prop('disabled', false);
+				return;
+			}
+
+			setTimeout(function() { 
+				$("#question-2").hide();
+				$("#answers-2").hide();
+				$("#question-3").show();
+				$("#answers-3").show();
+				clearMessage();
+			}, 3000);
+		});
+
+		$("#q3-submit").click(function() {
+			$("#q3-submit").prop('disabled', true);
+
+			if($("#q3-a1").prop("checked") || $("#q3-a2").prop("checked") || $("#q3-a3").prop("checked")) {
+				updateScores("dyonne", 1, "Goed!");
+			} else {
+				$("#q3-submit").prop('disabled', false);
+				return;
+			}
+
+			setTimeout(function() { 
+				$("#question-3").hide();
+				$("#answers-3").hide();
+				$("#question-4").show();
+				$("#answers-4").show();
+				clearMessage();
+			}, 3000);
+		});
+
+		$("#q4-submit").click(function() {
+			$("#q4-submit").prop('disabled', true);
+
+			if($("#q4").val() !== "" && $("#q4").val() !== undefined) {
+				updateScores("dyonne", 0, "Fout!");
+			} else {
+				$("#q4-submit").prop('disabled', false);
+				return;
+			}
+
+			setTimeout(function() { 
+				$("#question-4").hide();
+				$("#answers-4").hide();
+				$("#question-5").show();
+				$("#answers-5").show();
+				clearMessage();
+			}, 3000);
+		});
+
+		$("#q5-submit").click(function() {
+			$("#q5-submit").prop('disabled', true);
+
+			if($("#q5-a1").prop("checked")) {
+				updateScores("dyonne", 1, "Goed!");
+			} else if($("#q5-a2").prop("checked") || $("#q5-a3").prop("checked")) {
+				updateScores("sander", 0, "Fout!");
+			} else {
+				$("#q5-submit").prop('disabled', false);
+				return;
+			}
+
+			setTimeout(function() { 
+				$("#question-5").hide();
+				$("#answers-5").hide();
+				$("#question-6").show();
+				$("#answers-6").show();
+				clearMessage();
+			}, 3000);
+		});
+
+		$("#q6-submit").click(function() {
+			$("#q6-submit").prop('disabled', true);
+
+			updateScores("dyonne", 0, "Fout!");
+
+			setTimeout(function() { 
+				$("#question-6").hide();
+				$("#answers-6").hide();
+				$("#question-7").show();
+				$("#answers-7").show();
+				clearMessage();
+			}, 3000);
+		});
+
+		$("#q7-submit").click(function() {
+			var scoreBonus = 6 - scoreDyonne;
+			updateScores("dyonne", scoreBonus, "Je gooide een " + scoreBonus + "!");
+
+			setTimeout(function() { 
+				$("#question-7").hide();
+				$("#answers-7").hide();
+				$("#question-8").show();
+				$("#answers-8").show();
+				clearMessage();
+			}, 3000);
+		});
+
+		$("#q8-submit").click(function() {
+			var scoreBonus = 6 - scoreSander;
+			updateScores("sander", scoreBonus, "Je gooide een " + scoreBonus + "!");
+
+			setTimeout(function() { 
+				$("#question-8").hide();
+				$("#answers-8").hide();
+				$("#congratulations").show();
+				clearMessage();
+			}, 3000);
+		});
+
+
+	});
+</script>
