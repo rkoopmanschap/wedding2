@@ -22,7 +22,7 @@
 
 				<div class="row">
 					<div class="col-3 offset-2 text-center" id="doll-sander">
-						<canvas id="myCanvas" width="200" height="250" style="border:1px solid #000000;"></canvas>
+						<canvas id="maleCanvas" width="200" height="250" style="border:1px solid #DAE0E0;"></canvas>
 					</div>
 
 					<div class="col-2 text-center" id="notifcation-box" style="font-size: 20px; padding-top: 70px;">
@@ -30,7 +30,7 @@
 					</div>
 
 					<div class="col-3 text-center" id="doll-dyonne">
-						<canvas id="myCanvas" width="200" height="250" style="border:1px solid #000000;"></canvas>
+						<canvas id="femaleCanvas" width="200" height="250" style="border:1px solid #DAE0E0;"></canvas>
 					</div>
 				</div>
 			</div>
@@ -534,25 +534,51 @@
 		var scoreSander = 0;
 		var scoreDyonne = 0;
 
+		var maleSad = false;
+		var maleHappy = false;
+		var maleNeutral = true;
+
+		var femaleSad = false;
+		var femaleHappy = false;
+		var femaleNeutral = true;
+
 		function renderScoreBoard() {
 			$("#score-sander").html(scoreSander);
 			$("#score-dyonne").html(scoreDyonne);
 		}
 
 		function playDyonneCheers() {
-			console.log("dyonne cheers");
+			femaleSad = false;
+			femaleHappy = true;
+			femaleNeutral = false;
 		}
 
 		function playDyonneSad() {
-			console.log("dyonne sad");	
+			femaleSad = true;
+			femaleHappy = false;
+			femaleNeutral = false;
 		}
 
 		function playSanderCheers() {
-			console.log("sander cheers");
+			maleSad = false;
+			maleHappy = true;
+			maleNeutral = false;
 		}
 
 		function playSanderSad() {
-			console.log("sander sad");
+			maleSad = true;
+			maleHappy = false;
+			maleNeutral = false;
+		}
+
+		function setNeutral() {
+			maleSad = false;
+			maleHappy = false;
+			maleNeutral = true;
+
+			femaleSad = false;
+			femaleHappy = false;
+			femaleNeutral = true;
 		}
 
 		function showMessage(message) {
@@ -561,6 +587,7 @@
 
 		function clearMessage() {
 			$("#notifcation-box").html("");
+			setNeutral();
 		}
 
 		function updateScores(name, points, message) {
@@ -713,10 +740,143 @@
 			setTimeout(function() { 
 				$("#question-8").hide();
 				$("#answers-8").hide();
-				$("#congratulations").show();
 				clearMessage();
+				$("#congratulations").show();
+				playDyonneCheers();
+				playSanderCheers();
 			}, 3000);
 		});
+
+
+		// ====================
+		// 		GRAPHICS
+		// ====================
+
+		var male;
+		var female;
+
+		function startGame() {
+		    backgroundMale = new component(250, 250, "#DAE0E0", 0, 0, "rectangle", "male");
+		    backgroundFemale = new component(250, 250, "#DAE0E0", 0, 0, "rectangle", "female");
+		    male = new component(74, 208, "images/wedding_cartoon_man_neutral_final.jpg", 63, 37, "image", "male");
+		    female = new component(85, 182, "images/wedding_cartoon_wife_neutral_final.jpg", 57, 63, "image", "female");
+
+		    maleGameArea.start();
+		    femaleGameArea.start();
+		}
+
+		var maleGameArea = {
+		    canvasMale : document.querySelector('#maleCanvas'),
+		    start : function() {
+		        this.contextMale = this.canvasMale.getContext("2d");
+		        this.intervalMale = setInterval(updateGameAreaMale, 20);
+			},
+		    clear : function() {
+		        this.contextMale.clearRect(0, 0, this.canvasMale.width, this.canvasMale.height);
+		    },
+		    stop : function() {
+		        clearInterval(this.intervalMale);
+		    }
+		}
+
+		var femaleGameArea = {
+		    canvasFemale : document.querySelector('#femaleCanvas'),
+		    start : function() {
+		        this.contextFemale = this.canvasFemale.getContext("2d");
+		        this.intervalFemale = setInterval(updateGameAreaFemale, 20);
+			},
+		    clear : function() {
+		        this.contextFemale.clearRect(0, 0, this.canvasFemale.width, this.canvasFemale.height);
+		    },
+		    stop : function() {
+		        clearInterval(this.intervalFemale);
+		    }
+		}
+
+		function component(width, height, color, x, y, type, gameArea) {
+		    this.type = type;
+		    if(type == "image") {
+		        this.image = new Image();
+		        this.image.src = color;
+		    }
+		    this.width = width;
+		    this.height = height;
+		    this.speedX = 0;
+		    this.speedY = 0;
+		    this.x = x;
+		    this.y = y;    
+		    this.update = function() {
+		    	if(gameArea === "male") {
+		    		ctx = maleGameArea.contextMale;
+		    	} else {
+		    		ctx = femaleGameArea.contextFemale;
+		    	}
+		        
+		        if(type == "image") {
+		            ctx.drawImage(this.image, 
+		                this.x, 
+		                this.y,
+		                this.width, this.height);
+		        } else {
+		            ctx.fillStyle = color;
+		            ctx.fillRect(this.x, this.y, this.width, this.height);
+		        }
+		    }
+		    this.newPos = function() {
+		        this.x += this.speedX;
+		        this.y += this.speedY;
+		    }
+		}
+
+		function updateGameAreaMale() {
+			if(maleSad) {
+				male.image.src = "images/wedding_cartoon_man_sad_final.jpg";
+			} else if(maleHappy) {
+				male.image.src = "images/wedding_cartoon_man_happy_final.jpg";
+			} else if(maleNeutral) {
+				male.image.src = "images/wedding_cartoon_man_neutral_final.jpg";
+			}
+
+		    maleGameArea.clear();
+		    backgroundMale.update();
+
+		    male.newPos();
+		    male.update();
+		}
+		function updateGameAreaFemale() {
+			if(femaleSad) {
+				female.image.src = "images/wedding_cartoon_wife_sad_final.jpg";
+			} else if(femaleHappy) {
+				female.image.src = "images/wedding_cartoon_wife_happy_final.jpg";
+			} else if(femaleNeutral) {
+				female.image.src = "images/wedding_cartoon_wife_neutral_final.jpg";
+			}
+
+		    femaleGameArea.clear();
+		    backgroundFemale.update();
+
+		    female.newPos();
+		    female.update();
+		}
+
+		function clearmove() {
+		    male.speedX = 0; 
+		    male.speedY = 0; 
+
+		    female.speedX = 0; 
+		    female.speedY = 0; 
+		}
+
+		startGame();
+
+
+
+
+
+
+
+
+
 
 
 	});
