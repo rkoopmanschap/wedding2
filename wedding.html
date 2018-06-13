@@ -855,6 +855,8 @@
 		    femaleGameArea.clear();
 		    backgroundFemale.update();
 
+		    updateFemaleSpeed();
+		    updateMaleSpeed();
 		    female.newPos();
 		    female.update();
 		}
@@ -865,6 +867,43 @@
 
 		    female.speedX = 0; 
 		    female.speedY = 0; 
+		}
+
+		var femaleUp = false;
+		var femaleDown = false;
+		var maleUp = false;
+		var maleDown = false;
+
+		function updateFemaleSpeed() {
+			if(femaleHappy && !femaleUp && !femaleDown) {
+				femaleUp = true;
+				female.speedY = -3;
+			}
+			if(female.y <= 20 && femaleUp) {
+				femaleDown = true;
+				femaleUp = false;
+				female.speedY = 3;
+			}
+			if(female.y >= 63 && femaleDown) {
+				femaleDown = false;
+				female.speedY = 0;
+			}
+		}
+
+		function updateMaleSpeed() {
+			if(maleHappy && !maleUp && !maleDown) {
+				maleUp = true;
+				male.speedY = -3;
+			}
+			if(male.y <= 5 && maleUp) {
+				maleDown = true;
+				maleUp = false;
+				male.speedY = 3;
+			}
+			if(male.y >= 37 && maleDown) {
+				maleDown = false;
+				male.speedY = 0;
+			}
 		}
 
 		startGame();
